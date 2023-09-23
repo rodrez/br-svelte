@@ -1,8 +1,25 @@
 <script lang="ts">
-  import { page } from "$app/stores"
-</script>
+      import { page } from "$app/stores"
+    import '$styles/app.css'
+    import { SITE_TITLE, SITE_DESCRIPTION } from "$const";
+    import BaseHead from "$components/BaseHead.svelte";
+    import Header from "$components/Header.svelte"
+    import Footer from "$components/Footer.svelte"
 
+    // TODO: Look into moving BaseHead to the actual head
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+    import { onMount } from "svelte"
+
+    onMount(() => {
+      AOS.init();
+    })
+</script>
+<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
 <div>
+    <Header />
   <header>
     <div class="signedInStatus">
       <p class="nojs-show loaded">
@@ -27,14 +44,15 @@
         {/if}
       </p>
     </div>
-    <nav>
-      <ul class="navItems">
-        <li class="navItem"><a href="/">Home</a></li>
-        <li class="navItem"><a href="/protected">Protected</a></li>
-      </ul>
-    </nav>
+    <!-- <nav> -->
+    <!--   <ul class="navItems"> -->
+    <!--     <li class="navItem"><a href="/">Home</a></li> -->
+    <!--     <li class="navItem"><a href="/protected">Protected</a></li> -->
+    <!--   </ul> -->
+    <!-- </nav> -->
   </header>
   <slot />
+  <Footer />
 </div>
 
 <style>
@@ -43,30 +61,30 @@
       "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
       "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
       "Noto Color Emoji";
-    padding: 0 1rem 1rem 1rem;
-    max-width: 680px;
-    margin: 0 auto;
-    background: #fff;
-    color: #333;
+    /* padding: 0 1rem 1rem 1rem; */
+    /* max-width: 680px; */
+    /* margin: 0 auto; */
+    /* background: #fff; */
+    /* color: #333; */
   }
-  :global(li),
-  :global(p) {
-    line-height: 1.5rem;
-  }
-  :global(a) {
-    font-weight: 500;
-  }
-  :global(hr) {
-    border: 1px solid #ddd;
-  }
-  :global(iframe) {
-    background: #ccc;
-    border: 1px solid #ccc;
-    height: 10rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    filter: invert(1);
-  }
+  /* :global(li), */
+  /* :global(p) { */
+  /*   line-height: 1.5rem; */
+  /* } */
+  /* :global(a) { */
+  /*   font-weight: 500; */
+  /* } */
+  /* :global(hr) { */
+  /*   border: 1px solid #ddd; */
+  /* } */
+  /* :global(iframe) { */
+  /*   background: #ccc; */
+  /*   border: 1px solid #ccc; */
+  /*   height: 10rem; */
+  /*   width: 100%; */
+  /*   border-radius: 0.5rem; */
+  /*   filter: invert(1); */
+  /* } */
 
   .nojs-show {
     opacity: 1;
