@@ -1,32 +1,17 @@
-
-import type { Product } from '$lib/types'
+import { products } from '$const'
 import { error } from '@sveltejs/kit'
 
 export async function load({ params }: { params: { slug: string } }) {
-    const products: Product[] = [
-        {
-            id: crypto.randomUUID().toString(),
-            name: 'Product 1',
-            description: 'Product 1 description',
-            price: 100,
-            images: [ 'https://picsum.photos/200/300' ],
-            categories: [ 'Category 1', 'Category 2' ],
-            colors: [ 'Red', 'Blue' ],
 
+        const product = products.find(product => product.id === params.slug)
+        console.log('product', product);
+        console.log('params', params);
+        
+        
+        if(product) {
+            return {product:product}
+        }
 
-        },
-    ]
+        throw error(404, 'Could not find product ' + params.slug)
 
-    return {products}
-    // try {
-    //     const post = await import('../../posts/' + params.slug + '.md')
-    //
-    //     return {
-    //         content: post.default,
-    //         meta: post.metadata
-    //     }
-    //
-    // } catch (e) {
-    //     throw error(404, 'Could not find post ' + params.slug)
-    // }
 }

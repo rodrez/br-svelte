@@ -1,37 +1,47 @@
 <script lang="ts">
-// Some js goes here
+// const products = [
+//     {
+//         id: 1,
+//         selectedColor: 'Black',
+//         name: 'Machined Pen',
+//         price: '$35',
+//         colors: [ 
+//             {name:'black', className: 'bg-black'}, 
+//             {name:'brass', className: 'bg-yellow-500'}, 
+//             {name:'silver', className: 'bg-gray-200'}, 
+//             {name:'white', className: 'bg-white'}
+//         ],
+//         },
+//     {
+//         id: 2,
+//         selectedColor: 'Black',
+//         name: 'BR Hoodie',
+//         price: '$90',
+//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
+//         },
+//     {
+//         id: 3,
+//         selectedColor: 'Black',
+//         name: 'Nomad Tumbler',
+//         price: '$35',
+//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
+//         },
+//     {
+//         id: 4,
+//         selectedColor: 'Black',
+//         name: 'BR Shirt',
+//         price: '$35',
+//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
+//         },
+//     ]
 
-const products = [
-    {
-        selectedColor: 'Black',
-        name: 'Machined Pen',
-        price: '$35',
-        colors: [ 
-            {name:'black', className: 'bg-black'}, 
-            {name:'brass', className: 'bg-yellow-500'}, 
-            {name:'silver', className: 'bg-gray-200'}, 
-            {name:'white', className: 'bg-white'}
-        ],
-        },
-    {
-        selectedColor: 'Black',
-        name: 'BR Hoodie',
-        price: '$90',
-        colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-        },
-    {
-        selectedColor: 'Black',
-        name: 'Nomad Tumbler',
-        price: '$35',
-        colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-        },
-    {
-        selectedColor: 'Black',
-        name: 'BR Shirt',
-        price: '$35',
-        colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-        },
-    ]
+export let data;
+
+const products = data.products || [];
+
+console.log("products", products)
+console.log("data", data)
+
 </script>
 
 <div class="bg-white">
@@ -56,7 +66,7 @@ const products = [
               <div class="mt-6">
                 <p class="text-sm text-gray-500">{product.selectedColor}</p>
                 <h3 class="mt-1 font-semibold text-gray-900">
-                  <a href="#">
+                  <a href={`/product/${product.id}`}>
                     <span class="absolute inset-0"></span>
                     {product.name}
                   </a>
