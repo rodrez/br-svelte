@@ -1,43 +1,19 @@
 <script lang="ts">
-// const products = [
-//     {
-//         id: 1,
-//         selectedColor: 'Black',
-//         name: 'Machined Pen',
-//         price: '$35',
-//         colors: [ 
-//             {name:'black', className: 'bg-black'}, 
-//             {name:'brass', className: 'bg-yellow-500'}, 
-//             {name:'silver', className: 'bg-gray-200'}, 
-//             {name:'white', className: 'bg-white'}
-//         ],
-//         },
-//     {
-//         id: 2,
-//         selectedColor: 'Black',
-//         name: 'BR Hoodie',
-//         price: '$90',
-//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-//         },
-//     {
-//         id: 3,
-//         selectedColor: 'Black',
-//         name: 'Nomad Tumbler',
-//         price: '$35',
-//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-//         },
-//     {
-//         id: 4,
-//         selectedColor: 'Black',
-//         name: 'BR Shirt',
-//         price: '$35',
-//         colors: [{name:'black', className: 'bg-black'}, {name:'white', className: 'bg-white'}],
-//         },
-//     ]
+    import Carousel from "$components/Carousel.svelte"
+
 
 export let data;
 
 const products = data.products || [];
+const carouselItems = products.map((product) => {
+    return {
+        href: product.id,
+        src: 'https://tailwindui.com/img/ecommerce-images/home-page-02-product-02.jpg',
+        title: 'The Mug',
+        id: product.id,
+        images: product.images,
+    };
+});
 
 console.log("products", products)
 console.log("data", data)
@@ -98,3 +74,4 @@ console.log("data", data)
   </div>
 </div>
 
+<Carousel items={carouselItems} />
