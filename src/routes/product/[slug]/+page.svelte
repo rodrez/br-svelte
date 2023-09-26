@@ -152,7 +152,11 @@
     <div class="basis-full lg:basis-2/6">
       <div class="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
         <h1 class="mb-2 text-5xl font-medium">Acme Circles T-Shirt</h1>
-        <div class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"><p>$20.00<span class="ml-1 inline">USD</span></p></div>
+        <div
+          class="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white"
+        >
+          <p>$20.00<span class="ml-1 inline">USD</span></p>
+        </div>
       </div>
       <dl class="mb-8">
         <dt class="mb-4 text-sm uppercase tracking-wide">Color</dt>
@@ -326,13 +330,10 @@
                 >
                   Acme T-Shirt
                 </h3>
-
-                <!-- Todo: Extract to component -->
                 <p class="flex-none rounded-full bg-blue-600 p-2 text-white">
-                  $20.00
-                  <span class="ml-1 hidden @[275px]/label:inline">
-                      USD
-                  </span>
+                  $20.00<span class="ml-1 inline hidden @[275px]/label:inline"
+                    >USD</span
+                  >
                 </p>
               </div>
             </div>
@@ -354,7 +355,7 @@
               class="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
               style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent; --darkreader-inline-color: transparent;"
               sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw"
-              srcset="cdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=128&amp;q=75 128w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=256&amp;q=75 256w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=384&amp;q=75 384w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=640&amp;q=75 640w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=750&amp;q=75 750w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=828&amp;q=75 828w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1080&amp;q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1200&amp;q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1920&amp;q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=2048&amp;q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=3840&amp;q=75 3840w"
+              srcset="/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=128&amp;q=75 128w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=256&amp;q=75 256w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=384&amp;q=75 384w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=640&amp;q=75 640w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=750&amp;q=75 750w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=828&amp;q=75 828w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1080&amp;q=75 1080w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1200&amp;q=75 1200w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=1920&amp;q=75 1920w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=2048&amp;q=75 2048w, /_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=3840&amp;q=75 3840w"
               src="/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0754%2F3727%2F7491%2Ffiles%2Fhoodie-1.png%3Fv%3D1690003482&amp;w=3840&amp;q=75"
               data-darkreader-inline-color=""
             />

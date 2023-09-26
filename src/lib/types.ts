@@ -20,14 +20,17 @@ type ProductCategories =
   | "other"
 
 type Image = { src: string; altText: string }
+type Color = { name: string; className: string }
+type SelectedOption = { name: string; value: string }
 
 type Product = {
   id: string
   name: string
-  colors: string[]
-  price: number
+  colors: Color[]
+  price: Price
   description: string
   categories: ProductCategories[]
+  selectedOptions: SelectedOption[]
   images: Image[]
   published: boolean
 }
@@ -38,11 +41,6 @@ type ProductOption = {
   values: string[]
 }
 
-type Money = {
-  amount: string
-  currencyCode: string
-}
-
 type ProductVariant = {
   id: string
   title: string
@@ -51,10 +49,25 @@ type ProductVariant = {
     name: string
     value: string
   }[]
-  price: Money
+  price: Price
+}
+
+type Price = {
+  amount: string
+  currencyCode: string
+}
+
+type CarouselItem = {
+  href: string
+  src: string
+  title: string
+  id: string
+  image: string
+  price: Price
 }
 
 export type {
+  CarouselItem,
   Image,
   Post,
   Product,
