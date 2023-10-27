@@ -16,9 +16,6 @@
       price: product.price,
     }
   })
-
-  console.log("products", products)
-  console.log("data", data)
 </script>
 
 <div class="bg-white">

@@ -26,11 +26,12 @@ const config = {
       $const: "./src/const.ts",
       $lib: "./src/lib",
       $stores: "./src/stores",
-      $utils: "./src/utils.ts",
+      $utils: "./src/utils/index.ts",
       $styles: "./src/styles",
       $assets: "./src/assets",
       $routes: "./src/routes",
       $layouts: "./src/layouts",
+      $assets: "./src/assets",
     },
   },
 }

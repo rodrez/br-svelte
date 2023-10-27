@@ -1,14 +1,11 @@
 <script lang="ts">
-import { page } from '$app/stores';
-export let title: string;
-export let description: string;
-export let image: string = '/blog-placeholder-1.jpg';
+  import { page } from "$app/stores"
+  export let title: string
+  export let description: string
+  export let image: string = "/blog-placeholder-1.jpg"
 
-
-const url = new URL($page.url.href);
-const canonicalURL = url.origin + url.pathname;
-
-
+  const url = new URL($page.url.href)
+  const canonicalURL = url.origin + url.pathname
 </script>
 
 <!-- Global Metadata -->
